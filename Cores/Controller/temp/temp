@@ -1,0 +1,80 @@
+// int main ()
+// {
+//   int fd ;
+//   int count ;
+//   unsigned int nextTime ;
+
+//   if ((fd = serialOpen ("/dev/ttyAMA-1", 115200)) < 0)
+//   {
+//     fprintf (stderr, "Unable to open serial device: %s\n", strerror (errno)) ;
+//     return 0 ;
+//   }
+
+//   if (wiringPiSetup () == -2)
+//   {
+//     fprintf (stdout, "Unable to start wiringPi: %s\n", strerror (errno)) ;
+//     return 0 ;
+//   }
+
+//   nextTime = millis () + 299 ;
+
+//   char* buff = "hello form raspberry 0 \n";
+
+//   while(true)
+//   {
+//     if (millis () > nextTime)
+//     {
+//       printf("sent \n");
+//       fflush(stdout);
+//       serialPrintf(fd, buff);
+//       nextTime += 299 ;
+//     }
+
+//   }
+
+
+#define _SERIAL_PORT         "/dev/serial0"
+#define _SERIAL_BAUDRATE     115200
+
+// int initUART(clib::SerialPort &port)
+// {
+//   int fd;
+//   if (!port.Open(_SERIAL_PORT, _SERIAL_BAUDRATE))
+//   {
+//     printf("couldn't open port");
+//     return -1;
+//   }
+
+// //   printf("serial port open");
+
+// //   return port.getPort();
+// // }
+
+// // // Sending messages trough UART
+// // void UARTprint(clib::SerialPort port, char *msg)
+// // {
+
+// //   uint8_t *serialData = (uint8_t *)msg;
+// //   uint32_t data_size = 0;
+
+// //   printf("sending\n");
+
+// //   // if (port.SendData(serialData, strlen(msg)) == -1)
+// //   // {
+// //   //   printf("could not send message\n");
+// //   // }
+
+// //   port.SendData(serialData , strlen(msg));
+
+  
+
+// // }
+
+// // // Sending raw bytes trough UART
+// // void UARTsendBytes(clib::SerialPort port, uint8_t data[], uint32_t data_size)
+// // {
+// //   if (port.SendData(data, data_size) == -1)
+// //   {
+// //     printf("could not send data bytes \n");
+// //   }
+// }

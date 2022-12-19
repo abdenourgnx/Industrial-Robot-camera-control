@@ -1,0 +1,52 @@
+recieving code  methode 1 
+// int main ()
+// {
+
+//   int fd ; // init file discreptor
+
+//   //To init serial port
+//   if ((fd = serialOpen ("/dev/ttyAMA0", 115200)) < 0)
+//   {
+//     fprintf (stderr, "Unable to open serial device: %s\n", strerror (errno)) ;
+//     return 1 ;
+//   }
+
+//   //init wiringPi lib
+//   if (wiringPiSetup () == -1)
+//   {
+//     fprintf (stdout, "Unable to start wiringPi: %s\n", strerror (errno)) ;
+//     return 1 ;
+//   }
+
+//   //buffers to store coming data
+//   char* buff = (char*) malloc(sizeof(char) * 200) ;
+//   char* temp= buff;
+
+//   //loop to get data
+//   while(true)
+//   {
+//     while(serialDataAvail(fd)  )
+//     {
+//       char d = serialGetchar(fd);
+//       if (d != '\n')
+//       {
+//         *(temp++) = d ;
+
+//       }else{
+
+//         *(temp++) = '\n';
+//         *(temp) = '\0';
+
+//         printf(buff);
+//         fflush(stdout);
+//         temp = buff;
+
+//         break;
+
+//       }
+//     }
+
+//   }
+
+//   return 0 ;
+// }
