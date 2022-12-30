@@ -6,4 +6,4 @@ This project consists of two parts: a robot camera controller and a remote contr
 The robot camera controller is a device that is mounted on a robot and controls the movement and operation of a camera. It is responsible for capturing and sending images to the remote controller.
 
 #### Remote Controller
-The remote controller is a device that receives images from the robot camera controller and displays them on a screen. It also allows the user to control the movement and operation of the camera remotely.
+The remote controller is a device that receives images from the robot camera controller and displays them on a screen. It also allows the user to control the movement and operation of the camera remotely by sending VISCA commands to control the camera parameters and movement.
